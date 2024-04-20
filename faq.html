@@ -909,7 +909,7 @@
                 <div class="nicdark_space_block20"></div>
                 <div class="nicdark_divider left small"><span class="nicdark_bg_white "></span></div>
                 <div class="nicdark_space_block20"></div>
-                <p class="white">Lorem ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet, ipsum dolor sit amet. Lorem ipsum dolor sit amet dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                <p class="white">Where creativity meets craftsmanship, redefining luxury with exceptional designs and personalized service. We set new standards of elegance, ensuring every creation reflects our dedication to timeless beauty and perfection.</p>
                 <div class="nicdark_space_block20"></div>
                 <div class="nicdark_divider left small"><span class="nicdark_bg_white "></span></div>
                 <div class="nicdark_space_block20"></div>
@@ -929,18 +929,18 @@
             </div>
             <div class="nicdark_space10"></div>
 
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Bride</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Groom</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Dress</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Shoes</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Witness</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Pageboy</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Jewelry</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Flowers</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Bucket</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Rings</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Wedding</a>
-            <a href="#" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Atelier</a>
+            <a = class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Bride</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Groom</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Dress</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Shoes</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Witness</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Pageboy</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Jewelry</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Flowers</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Bucket</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Rings</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Wedding</a>
+            <a ="" class="nicdark_btn small white nicdark_margin10 nicdark_border_white">Atelier</a>
 
         </div>
 
@@ -1039,7 +1039,7 @@
                     <p class="greydark title"><small>
                         <i class="icon-up"></i>&nbsp;&nbsp;<a class="greydark nicdark_internal_link" href="#start_nicdark_framework">Back To Top</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="greendark nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr">|</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr">©</span>&nbsp;&nbsp;<a class="greydark nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr" href="#">Copyright NicDark - Made With <i class="icon-heart-filled red nicdark_zoom_hover"></i> In Venice</a></small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr">©</span>&nbsp;&nbsp;<a class="greydark nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr" href="#">Copyright Classic Pintharu</a></small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
                     <div class="nicdark_space5"></div>
                 </div>
@@ -1104,18 +1104,59 @@
     
     <!--settings-->
     <script src="js/settings.js"></script> <!--settings-->
-
 <!--custom js-->
 <script type="text/javascript">
     jQuery(document).ready(function() {
 
+
+        //START SLIDE
+        jQuery('.nicdark_slide1').show().revolution(
+        {
+            startwidth:1170,
+            startheight:650,
+            
+            navigationType:"bullet",
+            navigationArrows:"solo",
+            navigationStyle:"preview2",
+
+            onHoverStop:"on",
+
+            fullWidth:"on",
+            fullScreen:"on",
+
+
+            spinner:"spinner4",
+    
+            hideTimerBar: "on"
+        });
+        //END SLIDE
+
+
+        //START SLIDE VIDEO
+        jQuery('#nicdark_slide2').show().revolution(
+        {
+            startheight:399
+        });
+        //END SLIDE
+
+
         //START PARALLAX SECTIONS
-        $('#nicdark_parallax_title').parallax("50%", 0.3);
+        $('#nicdark_parallax_1').parallax("50%", 0.3);
+        $('#nicdark_parallax_2').parallax("50%", 0.3);
+        $('#nicdark_parallax_3').parallax("50%", 0.3);
+        $('#nicdark_parallax_4').parallax("50%", 0.3);
+        $('#nicdark_parallax_5').parallax("50%", 0.3);
         //END PARALLAX SECTIONS
+
+
+        //$('.nicdark_pageloader').fadeOut();
+
 
     });
 </script>
 <!--custom js-->
+
+
 
 <!--start preloader-->
 <script type="text/javascript">
