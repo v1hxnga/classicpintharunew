@@ -604,8 +604,8 @@
 
     <div class="grid grid_6 percentage nicdark_bg_grey">
         
-        <div id="map-canvas" style="width:100%; height:577px; float:left; margin:0px; padding:0px;"></div>
-        
+        <!-- <div id="map-canvas" style="width:100%; height:577px; float:left; margin:0px; padding:0px;"></div> -->
+        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.2119960922496!2d79.89884077475647!3d6.865499893133131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a666f693105%3A0x559a81984aca1a18!2sClassic%20Pintharu!5e1!3m2!1sen!2slk!4v1727246061354!5m2!1sen!2slk" width="760" height="570" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
 
     <div class="grid grid_6 percentage">
@@ -913,6 +913,8 @@
 
             <div class="nicdark_space_block20"></div>
 
+           
+
             <div class="nicdark_margin10">
                 <h4 class="white">OUR ATELIER</h4>
                 <div class="nicdark_space_block20"></div>
@@ -1111,174 +1113,7 @@
     <script src="js/plugins/countto/jquery.countTo.js"></script> <!--jquery.countTo-->
     <script src="js/plugins/countdown/jquery.countdown.js"></script> <!--countdown-->
     
-    <!--settings-->
-<script src="js/settings.js"></script> <!--settings-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyb9UW6-GshnKCVQ1lsFDtvHWJh0S89JM&sensor=true"></script> <!-- Google Map API -->
-
-<!--custom js-->
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-
-        //START PARALLAX SECTIONS
-        $('#nicdark_parallax_title').parallax("50%", 0.3);
-        $('#nicdark_parallax_2').parallax("50%", 0.3);
-        //END PARALLAX SECTIONS
-
-
-        //map
-        var map;
-        var brooklyn = new google.maps.LatLng(6.865718257130272, 79.90146933972753);
-
-        var MY_MAPTYPE_ID = 'custom_style';
-
-        function initialize() {
-
-
-
-
-          var featureOpts = 
-          [
-            {
-                "featureType": "landscape",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "stylers": [
-                    {
-                        "hue": "#00aaff"
-                    },
-                    {
-                        "saturation": -100
-                    },
-                    {
-                        "gamma": 2.15
-                    },
-                    {
-                        "lightness": 12
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "lightness": 24
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "lightness": 57
-                    }
-                ]
-            }
-        ];
-
-        
-
-          var mapOptions = {
-            zoom: 12,
-            center: brooklyn,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            mapTypeControlOptions: {
-              mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-            },
-            mapTypeId: MY_MAPTYPE_ID
-          };
-
-          map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-
-          var styledMapOptions = {
-            name: 'Custom Style'
-          };
-
-          var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-
-          map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-
-
-
-          var contentString = '<div class="nicdark_margin20 nicdark_relative"><a href="#" class="nicdark_displaynone_responsive nicdark_btn_icon nicdark_border_grey extrabig grey nicdark_absolute"><i class="icon-home-1"></i></a><div class="nicdark_activity nicdark_marginleft100 nicdark_disable_marginleft_responsive"><h4>CLASSIC PINTHARU</h4><div class="nicdark_space20"></div><p>No. 117, Old kesbawa rd, Gangodawilla, Nugegoda.</p></div></div>';
-
-          var infowindow = new google.maps.InfoWindow({
-              content: contentString
-          });
-
-          var image = new google.maps.MarkerImage("img/icons/map.png", null, null, null, new google.maps.Size(50,50));
-
-          var positionpin = new google.maps.LatLng(6.865718257130272, 79.90146933972753);
-
-          var marker = new google.maps.Marker({
-              position: positionpin,
-              icon: image,
-              map: map,
-              flat: true,
-              title: 'Uluru (Ayers Rock)'
-          });
-
-
-          google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map,marker);
-          });
-          infowindow.open(map,marker);
-
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-        //map  
-
-    });
-</script>
-<!--custom js-->
+    
 
 <!--start preloader-->
 <script type="text/javascript">
